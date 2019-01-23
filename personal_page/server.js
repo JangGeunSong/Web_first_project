@@ -26,16 +26,28 @@ http.createServer(function(request, response){
   }
   else if(pathname === '/About') {
     if(id === 'Intro') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`About/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else if(id === 'Who') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`About/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else if(id === 'career') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`About/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else {
       response.writeHead(404, {'Content-Type' : 'text/html'});
@@ -44,16 +56,28 @@ http.createServer(function(request, response){
   }
   else if(pathname === '/Astronomy') {
     if(id === 'Intro') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`Astronomy/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else if(id === 'Stars') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`Astronomy/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else if(id === 'Galaxies') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`Astronomy/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else {
       response.writeHead(404, {'Content-Type' : 'text/html'});
@@ -62,20 +86,36 @@ http.createServer(function(request, response){
   }
   else if(pathname === '/Computer') {
     if(id === 'Intro') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`Computer/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else if(id === 'C') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`Computer/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else if(id === 'Java') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`Computer/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else if(id === 'Web') {
-      response.writeHead(200, {'Content-Type' : 'text/html'});
-      response.end(baseTemplate(description));
+      fs.readdir(`.${pathname}`, `utf8`, function(err, filelist){
+        fs.readFile(`Computer/${id}`, `utf8`, function(err, description){
+          response.writeHead(200, {'Content-Type' : 'text/html'});
+          response.end(baseTemplate(description));
+        });
+      });
     }
     else {
       response.writeHead(404, {'Content-Type' : 'text/html'});
@@ -176,4 +216,20 @@ function baseTemplate(description) {
     </body>
   </html>
 `
+}
+
+//auto make collapsible function
+function mkCollapsible(path) {
+  fs.readdir(path, function(err, filelist){
+    var i = 0;
+    var list = `
+    <button class="collapsible">About</button>
+    <div class="linkcontent">
+    `;
+    for(i=0;i<filelist.length;i++) {
+      list = list + `<a href="${path}?id=${filelist[i]}">${filelist[i]}</a>`;
+    }
+    list = list + `</div>`;
+    return list;
+  });
 }
