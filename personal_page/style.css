@@ -169,4 +169,7 @@
   background-color: #4f4c4c;
   color: #e0f6b8;
   text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: relative;
 }
