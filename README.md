@@ -9,3 +9,6 @@ ver 0.4 ------ <1/17/2019>: Add the node.js system on the web page.
 
 
 I made this project static server side web application. So, I will make the dynamic server side project on this side.
+
+
+ver 0.6 ------ <1/23/2019>: set the dynamic sever side implementation by using node js. now i will add some update method on the application.
