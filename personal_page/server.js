@@ -183,6 +183,9 @@ function baseTemplate(description) {
           </div><br><br><br>
         </div>
         <div class="right_side">
+          <button class="creation">creation</button>
+          <button class="update">update</button>
+          <button class="remove">remove</button><br><br><br>
           ${description}
           <p>whole images that using on page</p>
           <div class="slideshow">
