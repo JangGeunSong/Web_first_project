@@ -10,3 +10,5 @@ ver 0.4 ------ <1/17/2019>: Add the node.js system on the web page.
 ver 0.6 ------ <1/23/2019>: set the dynamic sever side implementation by using node js. now i will add some update method on the application.
 
 express example added that will delete as complete the project
+
+I will add the cookie on this web application as practice version.
