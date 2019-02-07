@@ -1,4 +1,3 @@
-
 const express = require('express');
 // 모듈을 로드 const 는 상수이므로 바뀌지 않는다는것을 의미함
 const app = express();
@@ -10,7 +9,9 @@ const compression = require('compression');
 const port = 3000;
 const indexRouter = require('./routes/index');
 const topicRouter = require('./routes/topic');
+const userlog = require('./routes/userlog');
 const helmet = require('helmet');
+const cookie = require('cookie');
 
 app.use(helmet());
 //helmet is using for the security issue
@@ -32,6 +33,9 @@ app.use('/topic', topicRouter);
 //주소에 /topic이 들어가면 topicRouter의 코드가 실행됨을의미
 app.use('/', indexRouter);
 //주소에 /만 들어가면 topicRouter의 코드가 실행됨을의미
+app.use('/userlog', userlog);
+//login & logout 관련 정보를 페이지에 나타낼 때 사용
+
 
 app.use(function(request, response, next){
   response.status(404).send("Sorry 404 not found!!");
