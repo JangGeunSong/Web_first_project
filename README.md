@@ -11,4 +11,4 @@ ver 0.6 ------ <1/23/2019>: set the dynamic sever side implementation by using n
 
 express example added that will delete as complete the project
 
-I will add the cookie on this web application as practice version.
+ver 0.7 ------ <2/8/2019>: It add the authentification on the express folder. That needs to download the prompt install the express and cookie module
