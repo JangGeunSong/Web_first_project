@@ -12,3 +12,7 @@ ver 0.6 ------ <1/23/2019>: set the dynamic sever side implementation by using n
 express example added that will delete as complete the project
 
 ver 0.7 ------ <2/8/2019>: It add the authentification on the express folder. That needs to download the prompt install the express and cookie module
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+I make the mini project on this repo. and up side the project will go on
