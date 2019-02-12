@@ -15,4 +15,4 @@ ver 0.7 ------ <2/8/2019>: It add the authentification on the express folder. Th
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-I make the mini project on this repo. and up side the project will go on
+I will make the mini project on this repo. and up side the project will go on
