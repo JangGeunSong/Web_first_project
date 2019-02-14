@@ -1,4 +1,6 @@
 # Web_first_project
+This repo not a real completed web application. It just test the front and back end side programming technique test repo
+
 This is just my own homepages basic form that will be added.
 
 This repository has added the my page basic form and after few weeks i will upload the page source and JS source with node.js as a web server
@@ -16,3 +18,5 @@ ver 0.7 ------ <2/8/2019>: It add the authentification on the express folder. Th
 -------------------------------------------------------------------------------------------------------------------------------------
 
 I will make the mini project on this repo. and up side the project will go on
+
+---> now check the react part on this repo
