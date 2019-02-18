@@ -19,4 +19,4 @@ ver 0.7 ------ <2/8/2019>: It add the authentification on the express folder. Th
 
 I will make the mini project on this repo. and up side the project will go on
 
----> now check the react part on this repo
+---> now check the react part on this repo, this repo will find the new way of the front end made
