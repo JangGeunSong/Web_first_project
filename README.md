@@ -26,3 +26,7 @@ https://janggeunsong.github.io/Web_first_project/
 
 
 ---> this react project refered by nomadcoders free course react basic
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Now we clone the web pages most people are using on their life.
