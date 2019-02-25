@@ -30,3 +30,5 @@ https://janggeunsong.github.io/Web_first_project/
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 Now we clone the web pages most people are using on their life.
+
+I choose the web instagram.
