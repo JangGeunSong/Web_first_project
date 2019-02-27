@@ -41,15 +41,18 @@
 }
 
 .explore_div button {
+    background-color: white;
+    border: none;
     font-size: 25px;
     /* padding-left: 20px;
     padding-right: 20px; */
     margin: auto;
+    cursor: pointer;
 }
 
 article {
-    margin: 5px 5px 5px 5px;
-    width: 40%;
+    margin: 10px 5px 5px 5px;
+    width: 60%;
     background-color: gray;
 }
 
@@ -79,4 +82,16 @@ article {
 
 .content_option {
     margin: 5px;
+}
+
+.content_option span {
+    cursor: pointer;
+}
+
+.button_bundle span {
+    cursor: pointer;
+}
+
+.commnet_input input{
+    width: 100%;
 }

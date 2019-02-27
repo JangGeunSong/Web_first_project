@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/indexStyle.css">
 </head>
 <body>
+
     <nav class="header">
         <div class="logo">
             <a href="index.html">
@@ -27,9 +28,9 @@
         </div>
     </nav>
 
-
     <section class="content_layer">
-        <article>
+
+        <article id="post">
             <header class="content_header">
                 <div class="user_img" role="button">
                     <a class="user_img_link" href="/user_id/">
@@ -51,7 +52,7 @@
                 <section class="button_bundle">
                     <span class="btn_like">👍</span>
                     <span class="btn_comment">✍🏼</span>
-                    <span class="btn_favorite">📖</span>
+                    <span class="btn_share">📖</span>
                 </section>
                 <section class="like_info">
                     <h5><strong>Like ???</strong></h5>
@@ -63,12 +64,17 @@
                         <li class="user">Who are you?</li>
                     </ul>
                 </div>
-                <div class="footer"></div>
+                <div class="footer">
+                    <form class="commnet_input" action="submit">
+                        <input class="commnet_input_place" type="text" placeholder="comment">
+                    </form>
+                </div>
             </div>
             <div class="content_option">
                 <span class="btn_option" role="button">📋</span>
             </div>
         </article>
+
     </section>
     <script type="text/javascript" src="../js_code/controller.js"></script>
 </body>
