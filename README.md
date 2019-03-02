@@ -34,3 +34,7 @@ Now we clone the web pages most people are using on their life.
 I choose the web instagram.
 
 I added the js file on the instagram clone project
+
+HTML --> form 
+CSS  --> design
+JS   --> constroller
