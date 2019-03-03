@@ -38,3 +38,5 @@ I added the js file on the instagram clone project
 HTML --> form 
 CSS  --> design
 JS   --> constroller
+
+vanilla js + other frame work if needed
