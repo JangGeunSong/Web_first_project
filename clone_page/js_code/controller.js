@@ -6,8 +6,6 @@ var btnLike = document.getElementsByClassName('btn_like');
 
 console.log(btnLike[0]);
 
-console.log(btnLike);
-
 var likeInfo = document.getElementsByClassName('like_info');
 
 var clike_count = 0;
@@ -40,10 +38,62 @@ Array.from(btnComment).forEach(element => {
 
 var btnShare = document.getElementsByClassName('btn_share');
 
-function shareEvent() {
-    
+var dummy = document.getElementById('dummy');
+
+var overlay = document.getElementById('overlay');
+
+var backplace = document.getElementById('backplace');
+
+dummy.innerHTML = overlayTemplate();
+
+overlay = document.getElementById('overlay');
+
+overlay.addEventListener('click', turnOff);
+
+backplace = document.getElementById('backplace');
+
+function shareEvent(e) {
+    if(overlay === null) {
+        console.log('in the if');
+        overlay = document.getElementById('overlay');
+        overlay.addEventListener('click', turnOff(overlay));
+    }
+    if(overlay.style.display === "block") {
+        console.log(111);
+        if(e.target === backplace) {
+            console.log(222);
+        }
+        else {
+            console.log(333);
+            turnOff();
+        }
+    }
+    else {
+        console.log(444);
+        turnOn();
+    }
 }
 
 Array.from(btnShare).forEach(element => {
     element.addEventListener('click', shareEvent);
 });
+
+function turnOn() {
+    console.log('on');
+    overlay.style.display = "block";
+}
+
+function turnOff() {
+    console.log('off');
+    overlay.style.display = "none";
+}
+
+function overlayTemplate () {
+    return `
+    <div id="overlay">
+        <div id="backplace" style="block">
+            <p id="text">This is overlay</p>
+        </div>
+    </div>`;
+}
+
