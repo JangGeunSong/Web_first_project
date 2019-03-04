@@ -44,6 +44,18 @@ var overlay = document.getElementById('overlay');
 
 var backplace = document.getElementById('backplace');
 
+var body = document.getElementsByTagName('body');
+
+body[0].addEventListener('click', (e) => {
+    var id = e.target.getAttribute('id');
+    if(id === 'backplace') {
+        turnOn();
+    }
+    else if(id === 'text') {
+        turnOn();
+    }
+});
+
 dummy.innerHTML = overlayTemplate();
 
 overlay = document.getElementById('overlay');
@@ -52,6 +64,10 @@ overlay.addEventListener('click', turnOff);
 
 backplace = document.getElementById('backplace');
 
+backplace.addEventListener('click', () => {
+    console.log('Hello!');
+});
+
 function shareEvent(e) {
     if(overlay === null) {
         console.log('in the if');
@@ -59,17 +75,9 @@ function shareEvent(e) {
         overlay.addEventListener('click', turnOff(overlay));
     }
     if(overlay.style.display === "block") {
-        console.log(111);
-        if(e.target === backplace) {
-            console.log(222);
-        }
-        else {
-            console.log(333);
-            turnOff();
-        }
+        turnOff();
     }
     else {
-        console.log(444);
         turnOn();
     }
 }
@@ -79,12 +87,10 @@ Array.from(btnShare).forEach(element => {
 });
 
 function turnOn() {
-    console.log('on');
     overlay.style.display = "block";
 }
 
 function turnOff() {
-    console.log('off');
     overlay.style.display = "none";
 }
 
