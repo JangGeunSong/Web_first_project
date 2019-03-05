@@ -40,3 +40,5 @@ CSS  --> design
 JS   --> constroller
 
 vanilla js + other frame work if needed
+
+this README.md is modified using the git bash not using the github directly.
